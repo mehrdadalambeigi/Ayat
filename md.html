@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-<meta charset="UTF-8">
-<title>لیست مقالات</title>
-<style>
-body {
-    font-family: Tahoma;
-    direction: rtl;
-}
-li {
-    margin: 8px 0;
-}
-a {
-    color: #0066cc;
-    text-decoration: none;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>لیست مقالات</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            direction: rtl;
+            padding: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 8px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
 <h2>لیست مقالات</h2>
-<ul id="fileList"></ul>
 
-<script>
-fetch("MD_files/files.json")
-.then(res => res.json())
-.then(files => {
-    let ul = document.getElementById("fileList");
-    files.forEach(file => {
-        let li = document.createElement("li");
-        li.innerHTML = `<a href="MD_files/${file}" target="_blank">${file}</a>`;
-        ul.appendChild(li);
-    });
-});
-</script>
+<ul>
+    <li><a href="MD_files/test.txt" target="_blank">test</a></li>
+    <li><a href="MD_files/تحقیق شهید حسن آیت.docx" target="_blank">test</a></li>
+</ul>
 
 </body>
 </html>
