@@ -10015,5 +10015,29 @@ a.text-dark:hover {
         border-color: #dee2e6
     }
 }
+.teachers-fix {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.tm-testimonial-item {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.tm-testimonial-item h4 {
+  margin-bottom: 10px;
+}
+
+.tm-testimonial-item figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
 
 /*# sourceMappingURL=bootstrap.min.css.map */
