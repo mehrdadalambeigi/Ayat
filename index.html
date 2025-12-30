@@ -12,6 +12,12 @@
   <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
   <!--
 Tooplate 2117 Infinite Loop
 https://www.tooplate.com/view/2117-infinite-loop
@@ -178,7 +184,7 @@ https://www.tooplate.com/view/2117-infinite-loop
             <strong>اساتیدی ماهر و مجرب برای تدریسی بهتر در این مدرسه</strong>
           </p>
           <div class="mx-auto tm-gallery-container tm-gallery-container-2">
-            <div class="tm-testimonials-carousel">
+            <div class="tm-testimonials-carousel owl-carousel">
               <figure class="tm-testimonial-item" data-subject="fa dn">
                 <h4>آقای رجبی خواه</h4>
                 <blockquote>سابقه کار:</blockquote>
@@ -266,7 +272,7 @@ https://www.tooplate.com/view/2117-infinite-loop
             <strong>و به همراه کادر اجرایی با تجربه</strong>
           </p>
           <div class="mx-auto tm-gallery-container tm-gallery-container-2">
-            <div class="tm-testimonials-carousel">
+            <div class="tm-testimonials-carousel owl-carousel">
               <figure class="tm-testimonial-item">
               <h4>آقای سعید</h4>
                 <blockquote>سابقه کار:</blockquote>
@@ -675,28 +681,46 @@ https://www.tooplate.com/view/2117-infinite-loop
         ]
       });
     });
-  document.addEventListener('DOMContentLoaded', () => {
-      const buttons = document.querySelectorAll('.filters button');
-      const cards = document.querySelectorAll('.tm-testimonial-item');
-    
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filter = btn.dataset.filter;
-    
-          cards.forEach(card => {
-            const subjects = card.dataset.subject ? card.dataset.subject.split(' ') : [];
-            // کارت دیده شود اگر:
-            // 1. filter 'all' است
-            // 2. یا کارت شامل درس انتخاب شده است
-            if (filter === 'all' || subjects.includes(filter)) {
-              card.style.display = 'block';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
+<script>
+$(document).ready(function(){
+
+  // 1. فعال کردن carousel
+  const $carousel = $('.tm-testimonials-carousel');
+  $carousel.owlCarousel({
+    items: 3,       // تعداد کارت در صفحه، میتونی تغییرش بدی
+    margin: 10,
+    nav: true,
+    dots: false
+  });
+
+  // 2. ذخیره همه آیتم‌ها
+  const $allItems = $carousel.find('.tm-testimonial-item').clone();
+
+  // 3. کلیک روی دکمه‌ها
+  $('.filters button').click(function(){
+    const filter = $(this).data('filter');
+
+    // خالی کردن carousel
+    $carousel.trigger('replace.owl.carousel', ['']).trigger('refresh.owl.carousel');
+
+    // انتخاب آیتم‌های فیلتر شده
+    let $filteredItems;
+    if(filter === 'all'){
+      $filteredItems = $allItems;
+    } else {
+      $filteredItems = $allItems.filter(function(){
+        const subjects = $(this).data('subject') ? $(this).data('subject').split(' ') : [];
+        return subjects.includes(filter);
       });
-    });
+    }
+
+    // اضافه کردن آیتم‌ها به carousel و refresh
+    $carousel.trigger('replace.owl.carousel', [$filteredItems]).trigger('refresh.owl.carousel');
+  });
+
+});
+</script>
+
 </script>
 
 
@@ -704,6 +728,7 @@ https://www.tooplate.com/view/2117-infinite-loop
 </body>
 
 </html>
+
 
 
 
