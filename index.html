@@ -493,6 +493,26 @@ https://www.tooplate.com/view/2117-infinite-loop
   <script src="js/jquery.singlePageNav.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script>
+    <script>
+const buttons = document.querySelectorAll('.filters button');
+const cards = document.querySelectorAll('.tm-testimonial-item');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;
+
+    cards.forEach(card => {
+      const subjects = card.dataset.subject.split(' ');
+
+      if (filter === 'all' || subjects.includes(filter)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
 
     function getOffSet() {
       var _offset = 450;
@@ -680,6 +700,7 @@ https://www.tooplate.com/view/2117-infinite-loop
 </body>
 
 </html>
+
 
 
 
