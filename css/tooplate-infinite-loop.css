@@ -284,6 +284,7 @@ blockquote {
 .tm-testimonials-content {
   position: relative;
   z-index: 100;
+}
 
 
 .tm-bg-overlay {
@@ -697,6 +698,7 @@ p {
     margin: 0;
   }
 }
+
 
 
 
