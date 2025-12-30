@@ -283,7 +283,19 @@ blockquote {
 
 .tm-testimonials-content {
   position: relative;
+  padding-right: 14px;
   z-index: 100;
+}
+.content::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .tm-bg-overlay {
@@ -697,3 +709,4 @@ p {
     margin: 0;
   }
 }
+
