@@ -286,11 +286,11 @@ blockquote {
   padding-right: 14px;
   z-index: 100;
 }
-.content::before {
+.tm-testimonials-content::before {
   content: "";
   width: 6px;
   height: 6px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 50%;
   position: absolute;
   right: 0;
@@ -709,4 +709,5 @@ p {
     margin: 0;
   }
 }
+
 
