@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>راهنمای گشایش‌های شطرنج</title>
+<link rel="stylesheet" href="https://unpkg.com/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+<script src="https://unpkg.com/chess.js@1.0.0/chess.min.js"></script>
+<script src="https://unpkg.com/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+<style>
+body { font-family: 'Vazirmatn', sans-serif; padding: 10px; background: #f7f7f7; }
+h2 { text-align: center; color: #2c3e50; margin-top: 20px; }
+.gap { margin: 20px 0; padding: 15px; background: #fff; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+#board { margin: 0 auto; max-width: 100%; }
+.button-container { text-align: center; margin-top: 10px; }
+button { margin: 5px; padding: 8px 16px; border: none; background-color: #3498db; color: #fff; border-radius: 5px; cursor: pointer; }
+button:hover { background-color: #2980b9; }
+p { line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;">راهنمای گشایش‌های شطرنج</h1>
+
+<!-- گشایش‌ها -->
+<div class="gap">
+<h2>۱) گشایش ایتالیایی (Italian Game)</h2>
+<p>این گشایش با هدف توسعه سریع مهره‌ها شروع می‌شود.<br>
+فیل سفید فشار مستقیمی روی نقطه ضعیف f7 وارد می‌کند.<br>
+مناسب بازیکنان مبتدی و متوسط است.<br>
+کنترل مرکز و قلعه رفتن زودهنگام اهمیت زیادی دارد.<br>
+بازی معمولاً تهاجمی و قابل فهم پیش می‌رود.</p>
+<div id="board1" style="width: 100%; max-width:400px;"></div>
+<div class="button-container">
+<button onclick="prevMove(0)">قبلی</button>
+<button onclick="nextMove(0)">بعدی</button>
+</div>
+</div>
+
+<div class="gap">
+<h2>۲) گشایش اسپانیایی (Ruy Lopez)</h2>
+<p>یکی از قدیمی‌ترین و معتبرترین گشایش‌های شطرنج است.<br>
+فیل سفید اسب c6 را تحت فشار قرار می‌دهد.<br>
+هدف، تضعیف مرکز سیاه در بلندمدت است.<br>
+نیاز به صبر و مانورهای دقیق دارد.<br>
+در سطح حرفه‌ای بسیار پرکاربرد است.</p>
+<div id="board2" style="width: 100%; max-width:400px;"></div>
+<div class="button-container">
+<button onclick="prevMove(1)">قبلی</button>
+<button onclick="nextMove(1)">بعدی</button>
+</div>
+</div>
+
+<div class="gap">
+<h2>۳) سیستم لندن (London System)</h2>
+<p>این گشایش بر پایه ساختار ثابت پیاده‌هاست.<br>
+نیاز کمی به حفظ کردن حرکات دارد.<br>
+بازی آرام، امن و قابل کنترل ایجاد می‌کند.<br>
+برای بازی سریع و آنلاین بسیار محبوب است.<br>
+تمرکز اصلی روی استحکام و اشتباه کمتر است.</p>
+<div id="board3" style="width: 100%; max-width:400px;"></div>
+<div class="button-container">
+<button onclick="prevMove(2)">قبلی</button>
+<button onclick="nextMove(2)">بعدی</button>
+</div>
+</div>
+
+<div class="gap">
+<h2>۴) دفاع سیسیلی (Sicilian Defense)</h2>
+<p>پرکاربردترین پاسخ سیاه به 1.e4 است.<br>
+بازی را نامتقارن و تهاجمی می‌کند.<br>
+فرصت‌های برد زیادی برای سیاه ایجاد می‌شود.<br>
+نیاز به دقت تاکتیکی بالا دارد.<br>
+برای بازیکنان جسور انتخاب عالی است.</p>
+<div id="board4" style="width: 100%; max-width:400px;"></div>
+<div class="button-container">
+<button onclick="prevMove(3)">قبلی</button>
+<button onclick="nextMove(3)">بعدی</button>
+</div>
+</div>
+
+<div class="gap">
+<h2>۵) دفاع فرانسوی (French Defense)</h2>
+<p>ساختار پیاده‌ای محکم و قابل اعتماد می‌سازد.<br>
+مرکز بسته و بازی استراتژیک ایجاد می‌کند.<br>
+سیاه معمولاً ضدحمله را دیرتر آغاز می‌کند.<br>
+مدیریت فیل خانه تیره اهمیت زیادی دارد.<br>
+مناسب بازیکنان صبور و حسابگر است.</p>
+<div id="board5" style="width: 100%; max-width:400px;"></div>
+<div class="button-container">
+<button onclick="prevMove(4)">قبلی</button>
+<button onclick="nextMove(4)">بعدی</button>
+</div>
+</div>
+
+<div class="gap">
+<h2>۶) دفاع کارو-کان (Caro-Kann Defense)</h2>
+<p>گشایشی solid و کم‌ریسک برای سیاه است.<br>
+توسعه مهره‌ها معمولاً بدون ضعف انجام می‌شود.<br>
+به آخر بازی‌های قوی منجر می‌شود.<br>
+در برابر حملات سفید مقاوم است.<br>
+برای یادگیری اصول شطرنج بسیار مناسب است.</p>
+<div id="board6" style="width: 100%; max-width:400px;"></div>
+<div class="button-container">
+<button onclick="prevMove(5)">قبلی</button>
+<button onclick="nextMove(5)">بعدی</button>
+</div>
+</div>
+
+<script>
+// PGN هر گشایش
+const pgns = [
+`1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6`,
+`1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6`,
+`1. d4 d5 2. Nf3 Nf6 3. Bf4 e6 4. e3 Bd6`,
+`1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6`,
+`1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 Be7`,
+`1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5`
+];
+
+const boards = [];
+const games = [];
+const movesArr = [];
+let indices = [0,0,0,0,0,0];
+
+for(let i=0;i<6;i++){
+    games[i] = new Chess();
+    games[i].load_pgn(pgns[i]);
+    movesArr[i] = games[i].history();
+    boards[i] = Chessboard('board'+(i+1), {
+        position: 'start',
+        orientation: (i<3)? 'white':'black',
+        draggable: false
+    });
+}
+
+function nextMove(idx){
+    if(indices[idx] < movesArr[idx].length){
+        games[idx].move(movesArr[idx][indices[idx]]);
+        boards[idx].position(games[idx].fen());
+        indices[idx]++;
+    }
+}
+
+function prevMove(idx){
+    if(indices[idx] > 0){
+        indices[idx]--;
+        games[idx].reset();
+        for(let j=0;j<indices[idx];j++){
+            games[idx].move(movesArr[idx][j]);
+        }
+        boards[idx].position(games[idx].fen());
+    }
+}
+</script>
+</body>
+</html>
