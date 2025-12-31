@@ -79,14 +79,6 @@ blockquote {
   color: white;
   background-color: #38B;
 }
-.dropdown-menu {
-  display: none;
-}
-.dropdown-menu.show {
-  display: block;
-}
-
-
 
 /* Navbar */
 
@@ -740,6 +732,7 @@ p {
   margin-top: 10px;
   font-weight: bold;
 }
+
 
 
 
