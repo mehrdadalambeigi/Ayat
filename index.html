@@ -38,8 +38,19 @@
             <li class="nav-item">
               <a class="nav-link tm-nav-link" href="#whatwedo">درباره مدرسه</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="#testimonials">اساتید </a>
+            <li class="nav-item dropdown">
+              <a class="nav-link tm-nav-link dropdown-toggle"
+                 href="#"
+                 id="schoolDropdown"
+                 role="button"
+                 data-toggle="dropdown"
+                 aria-haspopup="true"
+                 aria-expanded="false">
+                اساتید
+              </a>
+            
+              <div class="dropdown-menu text-right" aria-labelledby="schoolDropdown">
+                <a class="dropdown-item" href="#whatwedo">کادر اجرایی</a>
             </li>
             <li class="nav-item">
               <a class="nav-link tm-nav-link" href="#gallery">محیط مدرسه</a>
@@ -475,6 +486,10 @@
   <script src="js/easing.min.js"></script>
   <script src="js/jquery.singlePageNav.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
   <script>
     
     function getOffSet() {
@@ -663,6 +678,7 @@
 </body>
 
 </html>
+
 
 
 
