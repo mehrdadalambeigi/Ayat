@@ -80,18 +80,12 @@ blockquote {
   background-color: #38B;
 }
 .dropdown-menu {
-  text-align: right;
-  right: 0;
-  left: auto;
+  display: none;
 }
 .dropdown-menu.show {
   display: block;
 }
-@media (min-width: 992px) {
-  .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
+
 
 
 /* Navbar */
@@ -746,6 +740,7 @@ p {
   margin-top: 10px;
   font-weight: bold;
 }
+
 
 
 
