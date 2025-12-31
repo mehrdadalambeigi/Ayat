@@ -491,23 +491,6 @@
 
   <script>
 
-// وقتی روی dropdown-toggle کلیک می‌کنیم
-document.querySelectorAll('.nav-item.dropdown .dropdown-toggle').forEach(function(toggle) {
-  toggle.addEventListener('click', function(e) {
-    e.preventDefault();        // جلوگیری از رفتار پیش‌فرض لینک
-    e.stopPropagation();       // جلوگیری از بسته شدن منوی موبایل
-    this.nextElementSibling.classList.toggle('show'); // باز/بسته کردن dropdown
-  });
-});
-
-// بستن همه dropdown ها وقتی روی بدنه کلیک می‌کنیم
-document.addEventListener('click', function() {
-  document.querySelectorAll('.dropdown-menu').forEach(function(menu){
-    menu.classList.remove('show');
-  });
-});
-
-
     
     function getOffSet() {
       var _offset = 450;
@@ -695,6 +678,7 @@ document.addEventListener('click', function() {
 </body>
 
 </html>
+
 
 
 
