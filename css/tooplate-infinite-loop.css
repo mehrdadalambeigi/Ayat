@@ -274,7 +274,7 @@ blockquote {
 /* Testimonials */
 #testimonials {
   color: white;
-  background-color: ##001828;
+  background-color: #000c03;
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -283,7 +283,7 @@ blockquote {
 
 @media (max-width: 991px) {
   #testimonials {
-    background-color: ##001828;
+    background-color: #000c03;
   }
 }
 
@@ -732,6 +732,7 @@ p {
   margin-top: 10px;
   font-weight: bold;
 }
+
 
 
 
