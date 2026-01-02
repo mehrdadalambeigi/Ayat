@@ -7,14 +7,14 @@ https://www.tooplate.com/view/2117-infinite-loop
 */
 @font-face {
   font-family: 'Vazirmatn';
-  src: url('fontawesome/Vazirmatn-Regular.woff2') format('woff2');
+  src: url('fontawesome-5.5/Vazirmatn-Regular.woff2') format('woff2');
   font-weight: 400; /* وزن عادی */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Vazirmatn';
-  src: url('fontawesome/Vazirmatn-Bold.woff2') format('woff2');
+  src: url('fontawesome-5.5/Vazirmatn-Bold.woff2') format('woff2');
   font-weight: 700; /* وزن بولد */
   font-style: normal;
 }
@@ -743,6 +743,7 @@ p {
   margin-top: 10px;
   font-weight: bold;
 }
+
 
 
 
