@@ -164,7 +164,7 @@ blockquote {
 
 #infinite {
   background-color: #222;
-  background-image: url(../img/ayat1.png);
+  background-image: url(../img/ayat1.jpg);
   background-repeat: no-repeat;
   height: 100vh;
   min-height: 375px;
@@ -743,6 +743,7 @@ p {
   margin-top: 10px;
   font-weight: bold;
 }
+
 
 
 
