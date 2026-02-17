@@ -163,7 +163,6 @@ blockquote {
 /* Hero */
 
 #infinite {
-  background-color: #222;
   background-image: url(..img/Untitled-design.jpg);
   background-repeat: no-repeat;
   height: 100vh;
@@ -743,6 +742,7 @@ p {
   margin-top: 10px;
   font-weight: bold;
 }
+
 
 
 
